@@ -1,0 +1,14 @@
+<button class="btn btn-primary mb-2" (click)="openPop(content)">Import</button>
+<input type="file" #file style="display: none" (change)="onFilesAdded()" name="image" />
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <button class="btn btn-success mb-2" (click)="chooseFile()">choose</button>
+    <button class="btn btn-success mb-2" (click)="attachImage()">Attach</button>
+  </div>
+  <div class="modal-body">
+    <app-gallery (selectedImgGallery) = "selectedImgGallery($event)"></app-gallery>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-success" (click)="okFunction()">OK</button>
+  </div>
+</ng-template>

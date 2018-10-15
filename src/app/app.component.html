@@ -1,0 +1,6 @@
+<app-upload (event)="getUrl($event)"></app-upload>
+<ckeditor
+    [(ngModel)]="ckeditorContent"
+    [readonly]="false"
+    debounce="500" #ckEditor>
+  </ckeditor>

@@ -1,0 +1,6 @@
+<ul class="list-inline">
+  <li *ngFor="let image of images" style="width: 150px; height: 200px;" class="list-unstyled list-inline-item"
+    [ngClass]="{'selected': selectedImage == image}" (click)="listClick($event, image)">
+    <img [src]="image.image" class="img-fluid" style="height:100%;">
+  </li>
+</ul>
